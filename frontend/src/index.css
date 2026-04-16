@@ -1,0 +1,28 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: black;
+    color: white;
+    font-family: "Google Sans", sans-serif;
+     font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+  }
+}
+/* Hide scrollbar but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
