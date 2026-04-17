@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NoteCard from '../components/NoteCard'
+import { getNotes } from '../components/api';
 
 function Home() {
-  return (
-    <div className="min-h-screen mx-auto py-5 flex flex-wrap gap-6 justify-baseline">
+  const [notes,setNotes]=useState([]);
 
-      <NoteCard 
-        title="Gym"
-        description="Leg day workout"
-      />
+  useEffect(()=>{
+        getNotes()
+         .then(data=>{ 
+          setNotes(data)});
+  },[])
+  return (
+    <div className="min-h-screen mx-auto py-5 flex flex-wrap gap-4 content-start">
+
+     {notes.map((note)=>{
+      return <NoteCard key={note._id} id={note._id} title={note.title} description={note.description}></NoteCard>
+     })}
 
      
 

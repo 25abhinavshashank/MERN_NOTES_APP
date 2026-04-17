@@ -8,7 +8,7 @@ const notesSchema=new schema({
         required:true,
         trim:true,
         minlength:2,
-        maxlength:10
+      
     },
     description:{
         type:String,

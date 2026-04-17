@@ -6,10 +6,10 @@ const app=express();
 const appRouter=require("../src/routes/notesRoutes");
 const cors=require('cors')
 
-
+app.use(cors())
 app.use(express.json());
 app.use("/notes",appRouter);
-app.use(cors());
+
 
 
 
