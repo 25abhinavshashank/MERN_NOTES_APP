@@ -1,11 +1,11 @@
 const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const getNotes = () => {
-  return fetch(`${BASE_URL}/notes`).then(res => res.json());
+  return fetch(`${BASE_URL}/notes`, { cache: "no-store" }).then(res => res.json());
 };
 
 export const getNoteById = (id) => {
-  return fetch(`${BASE_URL}/notes/${id}`).then(res => res.json());
+  return fetch(`${BASE_URL}/notes/${id}`, { cache: "no-store" }).then(res => res.json());
 };
 
 export const addNote = async (data) => {
